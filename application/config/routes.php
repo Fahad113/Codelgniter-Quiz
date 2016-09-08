@@ -43,10 +43,17 @@
 $route['student/update'] = 'student_ctrl/update';
 $route['student/delete'] = 'student_ctrl/delete';
 $route['student/create'] = 'student_ctrl/create';
-$route['default_controller'] = 'login_ctrl';
-$route['students/(:any)'] = 'student_ctrl/view/$1';
-$route['student/(:any)'] = 'student_ctrl/view/$1';
+////------------
+$route['project/update_emp_record'] = 'project_ctrl/update_employee';
+$route['project/insert_emp_record'] = 'project_ctrl/create';
+$route['student/insert_emp_record'] = 'project_ctrl/insert_emp_record';
 
+
+$route['default_controller'] = 'project_ctrl';
+//$route['students/(:any)'] = 'student_ctrl/view/$1';
+//$route['student/(:any)'] = 'student_ctrl/view/$1';
+$route['alpp/(:any)'] = 'project_ctrl/view/$1';
+$route['alpp_emp/(:any)'] = 'project_ctrl/view/$1';
 //$route['default_controller'] = "news";
 $route['404_override'] = '';
 

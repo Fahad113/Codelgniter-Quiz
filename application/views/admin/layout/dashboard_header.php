@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <title>Admin Panel</title>	
-    [if lt IE 9]>
+    
     <!--<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />-->
     <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
     <![endif]
@@ -45,7 +45,7 @@
 </script>
 <style>
 #myDIV {
-    background-color: lightblue;
+   
   border-bottom: 2px dotted;
     -webkit-animation: mymove 2s infinite; /* Chrome, Safari, Opera */
     animation: mymove 2s infinite;
@@ -53,17 +53,18 @@
     padding-right: .6em;
 margin: 1em 0;
  font-family: "Comic Sans MS", Times, serif;
+ color: white;
 }
 
 /* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
+/*@-webkit-keyframes mymove {
     30% {padding: 10px;}
 }
 
-/* Standard syntax */
+ Standard syntax 
 @keyframes mymove {
     30% {padding: 10px;}
-}
+}*/
 </style>
 </head>
 <body>
@@ -74,17 +75,17 @@ margin: 1em 0;
         <!--<h2 class="section_title">Dashboard</h2><div class="btn_view_site"><a href="">View Site</a></div>-->
     </hgroup>
 </header> <!-- end of header bar -->
-<section id="secondary_bar">
+<!--<section id="secondary_bar">
     <div class="user">
         <p>Admin</p>
          <a class="logout_user" href="<?php echo base_url()."index.php/login_ctrl/logout"; ?>" title="Logout">Logout</a> 
     </div>
-<!--<div class="breadcrumbs_container">
+<div class="breadcrumbs_container">
     <article class="breadcrumbs"><a href="dashboard.php" class="current">Dashboard</a> 
          <div class="breadcrumb_divider"></div> <a href="change_password.php" class="current" >Change Password</a>
     </article>
-</div>  -->
-</section><!-- end of secondary bar -->
+</div>  
+</section> end of secondary bar -->
 <aside id="sidebar" class="column">
 <h3>Menu List</h3>
 <a href="../../student/success.php"></a>
@@ -92,7 +93,7 @@ margin: 1em 0;
     <!--<li class="icn_new_article"><a href="<?php echo base_url()."index.php/student_ctrl/create"; ?>">Add New Student</a></li>-->
     <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a href="<?php echo base_url()."index.php/student_ctrl/home"; ?>" > Home</a></li>
         <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; "class="icn_new_article"><a href="<?php echo base_url()."index.php/student_ctrl/"; ?>">Student Record</a></li>
-    <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a >Teachers Record</a></li>
+    <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a href="<?php echo base_url()."index.php/project_ctrl/"; ?>" >Insert Record For Project</a></li>
     <li id="myDIV" style="background-color:#d4d4d4; padding: 5%; " class="icn_new_article"><a>Our Services </a></li>
     <li class="icn_new_article"><a href="<?php echo base_url()."index.php/question_ctrl/question_list"; ?>">Question List</a></li>
 </ul>

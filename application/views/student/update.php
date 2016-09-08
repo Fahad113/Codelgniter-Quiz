@@ -42,7 +42,7 @@
         </style>
     </head>
 	<body>
-            <table class="table-striped">
+            <table class=" table-striped">
                     <caption><h2 style="font-family:cursive;color: black"> <img src="<?php echo base_url('images/u.png'); ?>" alt=""/>Student Update Form</h2></caption>
 				<tr>
 					<td><label for="name">Student ID</label></td>

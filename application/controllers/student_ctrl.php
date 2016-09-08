@@ -10,10 +10,12 @@ class student_ctrl extends CI_Controller {
 	{
 		//echo "tt";
 		//exit();
-		$data['students'] = $this->student_model->get_student();
-		$data['title'] = 'Student archive';
+		//$data['students'] = $this->student_model->get_student();
+                $data['students'] = $this->student_model->get_student();
+               
+//		$data['title'] = 'Student archive';
 		$this->load->view("admin/layout/dashboard_header.php");
-		$this->load->view("student/index.php",$data);
+		$this->load->view("student/index",$data);
 		//$data['student'] = $this->student_model->get_student();
 		$this->load->view('admin/layout/footer.php');
 		//print_r($data);
@@ -30,30 +32,30 @@ class student_ctrl extends CI_Controller {
 	
 	
 	public function create()
-	{
-		$this->load->helper('form');
-		$this->load->library('form_validation');
-	
-		$data['title'] = 'Create a news item';
-	
-		$this->form_validation->set_rules('name', 'name', 'required');
-		$this->form_validation->set_rules('fname', 'fname', 'required');
-		$this->form_validation->set_rules('class', 'class', 'required');
-		$this->form_validation->set_rules('address', 'address', 'required');
-	
-		if ($this->form_validation->run() === FALSE)
-		{
-			$this->load->view("admin/layout/dashboard_header.php");
-			$this->load->view('student/create.php');
-			$this->load->view('admin/layout/footer.php');
-	
-		}
-		else
-		{
-			$this->student_model->set_student();
-			//$this->load->view('student/success');
+        {
+                $this->load->helper('form');
+                $this->load->library('form_validation');
+
+                $data['title'] = 'Create a news item';
+
+                $this->form_validation->set_rules('name', 'name', 'required');
+                $this->form_validation->set_rules('fname', 'fname', 'required');
+                $this->form_validation->set_rules('class', 'class', 'required');
+                $this->form_validation->set_rules('address', 'address', 'required');
+
+                if ($this->form_validation->run() === FALSE)
+                {
+                        $this->load->view("admin/layout/dashboard_header.php");
+                        $this->load->view('student/create.php');
+                        $this->load->view('admin/layout/footer.php');
+
+                }
+                else
+                {
+                        $this->student_model->set_student();
+                        //$this->load->view('student/success');
                         redirect('student_ctrl','refresh');
-		}
+                }
 	}
 	
 	public function delete($id)
@@ -107,6 +109,7 @@ class student_ctrl extends CI_Controller {
             $this->load->view('student/success.php');
             $this->load->view('admin/layout/footer.php');
         }
+       
 
 
 }
